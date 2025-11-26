@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\setstretch{1.25}
+
+\title{A 5-Year Comparative Analysis of US and UK Monetary Policy and the Dollar--Sterling Exchange Rate}
+\author{James Onyegbosi}
+\date{November 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+The economic relationship between the US and the UK remains a crucial barometer for global financial health. As both nations navigate the complex path from high inflation to economic stabilisation, the movements in their central bank policies provide direct insight into the Dollar--Sterling exchange rate (USD/GBP).
+
+This analysis aims to test whether the prevailing interest rate differential, the difference between the US Effective Federal Funds Rate (EFFR) and the UK Official Bank Rate (OBR), has been a significant predictor of the movement in the Sterling--Dollar exchange rate over the past five years, and to discuss the implications of divergent US and UK central bank policies, particularly the US Federal Reserve's strong GDP performance and the Bank of England's struggle with services inflation.
+
+\section{Data Analysis and Findings}
+
+Within this analysis, we used the following Ordinary Least Squares (OLS) regression model;
+\[
+\text{USD/GBP}_t = \alpha + \beta \cdot \text{IRD}_t + \varepsilon_t,
+\]
+where $\text{IRD}_t$ is the interest rate differential defined as EFFR minus OBR. Monthly data over the past five years was used, to quantify the relationship between the interest rate differential and the exchange rate. We utilised monthly data from the past five years, setting the USD/GBP exchange rate as the dependent variable and the Interest Rate Differential (IRD) as the independent variable.
+
+The resulting regression formula revealed a statistically significant relationship. Our primary finding is that the coefficient on the IRD term is equal to
+\[
+\beta_{\text{IRD}} = -0.1115.
+\]
+This suggests a relationship that counters typical Uncovered Interest Rate Parity (UIRP) expectations: holding all other factors constant, a 100 basis point (1.00\%) increase in the US's rate advantage (higher EFFR relative to OBR) is statistically associated with an 11.15 cent appreciation of the Pound against the Dollar. This counter-intuitive result may indicate that other macro-factors, such as the Dollar's role as a safe haven during periods of high US policy uncertainty, dominate the simple interest rate channel.
+
+The two accompanying figures visually reinforce this finding, though the model's $R^2$ of 0.2961 confirms that while rate differentials are a critical driver, non-rate factors---such as relative growth forecasts and shifting global risk appetite---remain powerful, explaining the remaining volatility.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{Monthly Interest Rate Differential vs. Exchange Rate with Line of Best Fit.png}
+    \caption{Monthly Interest Rate Differential vs. Exchange Rate with Line of Best Fit}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{USD_GDP Exchange Rate and Interest Rate Differential.png}
+    \caption{USD/GDP Exchange Rate and Interest Rate Differential}
+\end{figure}
+
+\section{The Federal Reserve's Stance and US Rate Movements}
+
+The Federal Reserve’s policy in late 2025, evidenced by the EFFR oscillating between approximately 3.87\% and 4.12\% in October 2025, reflects a highly calculated and nuanced approach. The Fed successfully executed a robust hiking cycle to tame inflation, and the current target range highlights their commitment to a ``higher for longer'' strategy to ensure price stability.
+
+The data confirms the aggressive pivot from near-zero rates that began several quarters prior. The primary challenge now facing the Federal Reserve is determining the precise moment to pivot to cuts without prematurely reigniting price pressures. Recent strong US GDP growth figures, despite high borrowing costs, have emerged as a significant headwind to early easing, leading markets to push back expectations for a significant rate cut in the near term. The resilience of the American consumer and the tight labour market continue to justify the Fed's cautious optimism.
+
+\section{The Bank of England's Tightrope Walk}
+
+The Bank of England (BoE) has navigated its own challenging path against a backdrop of unique domestic pressures, particularly concerning imported energy costs and a tight labour market. The OBR, which stood around 4.25\% in mid-2025 (a slight reduction from a previous high of 4.5\%), indicates the BoE is balancing the critical need to crush inflation with the rising risk of a domestic slowdown.
+
+The UK economy has shown more sensitivity to the cumulative effect of the rate hikes than its US counterpart, fuelling recessionary concerns. While headline inflation is moderating, the BoE remains highly focused on stubborn services inflation and underlying domestic wage growth, leading to a cautious tone regarding future policy easing, despite whispers of an economic downturn. The central bank’s recent small movement in the OBR suggests a delicate equilibrium, acknowledging success in taming top-line CPI while remaining vigilant against embedded inflationary pressures.
+
+\section{Conclusion}
+
+Our quantitative analysis established a clear relationship: the relationship is negative, as shown by our IRD term coefficient of $-0.1115$. This result confirms that when the US gains a rate advantage, the Pound unexpectedly strengthens, suggesting that risk-off flows or other structural factors supersede simple interest rate parity in this currency pair. This dynamic is amplified by the US Dollar's safe-haven status and the US economy's perceived superior resilience, which translates rate advantages into meaningful FX movements. The USD has continued to benefit from this perception, leading to moments where the GBP struggles to break past key resistance levels.
+
+Ultimately, the GBP/USD pair reflects a convergence of relative strength: the UK’s commitment to higher rates to fight inflation versus the US’s deeper economic momentum. Any deviation from expected policy paths in either country, such as a surprising rate cut in London or a renewed hawkish message from Washington, will likely trigger rapid volatility in the cross-currency market.
+
+\section*{References}
+
+Gratton, P. (2025) \textit{What is Carry Trade? Definition, Example \& Risks Explained}.  
+Available at: \url{https://www.investopedia.com/carry-trade-definition-4682656}.
+
+Hayes, A. (2025) \textit{Uncovered Interest Rate Parity: Definition, Formula, and Key Insights}.  
+Available at: \url{https://www.investopedia.com/terms/u/uncoveredinterestrateparity.asp}.
+
+Holoborodko, P. (2021) \textit{QuickLaTeX}.  
+Available at: \url{https://www.quicklatex.com/}.
+
+Bank of England (2025). \textit{Spot exchange rate, US \$ into Sterling [XUDLUSS]}.  
+Available at: \url{https://www.bankofengland.co.uk/...}.
+
+Bank of England (2025). \textit{The interest rate (Bank Rate)}.  
+Available at: \url{https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate}.
+
+Federal Reserve Bank of New York (2025). \textit{Effective Federal Funds Rate}.  
+Available at: \url{https://www.newyorkfed.org/markets/reference-rates/effr}.
+
+\end{document}
